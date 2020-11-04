@@ -29,5 +29,8 @@ class MaxLossStopper(Stopper):
 
     def stop(self, env: 'TradingEnv') -> bool:
         c1 = env.action_scheme.portfolio.profit_loss < self.max_allowed_loss
+        print(env.action_scheme.portfolio.profit_loss)
+        print("c1 = {}".format(c1))
         c2 = not env.observer.has_next()
+        print("c2 = {}".format(c2))
         return c1 or c2
