@@ -525,8 +525,6 @@ class PlotlyTradingChart(BaseRenderer):
 
         self._net_worth_chart.update({'y': net_worth})
 
-        self.fig.show()
-
 
     def save(self) -> None:
         """Saves the current chart to a file.
